@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort  # CHANGER LoadBalancer -> NodePort
   selector:
-    app: netflix
+    app: netflix-app
   ports:
     - protocol: TCP
       port: 80
