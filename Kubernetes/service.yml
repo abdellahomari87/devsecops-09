@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: netflix-app
 spec:
-  type: LoadBalancer
+  type: NodePort  # CHANGER LoadBalancer -> NodePort
   selector:
     app: netflix
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 30007  # Un port entre 30000 et 32767
